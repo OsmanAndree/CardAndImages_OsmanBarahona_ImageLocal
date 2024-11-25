@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
             CardAndImages_OsmanBarahona_LocalTheme {
                 CardAndImages_OsmanBarahona_LocalTheme {
                     Scaffold(
-                        topBar = { InstagramStyleTopAppBar() },
+                        topBar = { TopAppBarInsta() },
                         content = { paddingValues ->
                             Surface(
                                 modifier = Modifier
@@ -68,8 +68,8 @@ class MainActivity : ComponentActivity() {
                                 color = MaterialTheme.colorScheme.background
                             ) {
                                 LazyColumn {
-                                    item { Cardinstagram1(username = "Real Madrid CF") }
-                                    item { Cardinstagram2(username = "FC Barcelona") }
+                                    item { InstaCard1(username = "Real Madrid CF") }
+                                    item { InstaCard2(username = "FC Barcelona") }
 
                                 }
                             }
@@ -82,7 +82,7 @@ class MainActivity : ComponentActivity() {
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
-    fun InstagramStyleTopAppBar() {
+    fun TopAppBarInsta() {
         TopAppBar(
             title = {
                 Row(
@@ -130,7 +130,7 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun Cardinstagram1(username: String, modifier: Modifier = Modifier) {
+    fun InstaCard1(username: String, modifier: Modifier = Modifier) {
         Card(
             modifier = modifier
                 .fillMaxWidth()
@@ -241,7 +241,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Cardinstagram2(username: String, modifier: Modifier = Modifier) {
+fun InstaCard2(username: String, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .fillMaxWidth()
